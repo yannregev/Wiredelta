@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset= "UTF-8">
+	<link rel="stylesheet" media="screen" href="Screen.css">
+	<script src="tasks.json"></script>
+	<script src="Scripts.js"></script>
+	<title >My day</title>
+</head>
+
+<body onload = "loadTasks(), createDate(), changeBackground(), weather(), loadQuote()">
+	
+	<header>
+		<h1 id="pageTitle">My day</h1>
+		<nav>
+			<ul id="dateAndTime" ></ul>
+			<ul id="weather" ></ul>
+		</nav>
+		<p id="insparational">Insperational quote of the day:<br></p>
+	</header>
+	
+	<section>
+		<div class="tab">
+			<button id="tablink" onclick="openTomorrow()">Tomorrow's tasks</button>
+		</div>
+		<div id="tabcontent">
+			<table id="tomorrowsTasksTable">
+			</table>
+		</div>
+	</section>
+
+	<section>
+		<h3>Customize</h3>
+		<div class="customize">
+			<input type="text" id="newTitle">
+			<button  onclick="changeTitle()">Change title</button>
+		</div>
+		<div class="colorSelect customize">
+			<select onchange = "changeBackground()" id="backgroundColor">
+				<option value="white">White</option>
+				<option value="blue">Blue</option>
+				<option value="red">Red</option>
+				<option value="yellow">Yellow</option>
+				<option value="pink">Pink</option>
+				<option value="green">Green</option>
+				<option value="orange">Orange</option>
+				<option value="silver">Silver</option>
+				<option value="gold">Gold</option>
+				<option value="brown">Brown</option>
+				<option value="violet">Violet</option>
+			</select>
+		</div>
+	</section>	
+
+	<article>
+		<h3>Today's agenda</h3>
+		<table id="tasksTable">
+		</table>
+	</article>
+	
+	<footer>
+		
+	</footer>
+</body>
+</html>
